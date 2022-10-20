@@ -4,3 +4,11 @@ services:
 
 before_install:
   - docker build -t nagdockerid1/docker-react -f Dockerfile.dev .
+
+deploy:
+  provider: elastickbeanstalk
+  region: "us-east-1"
+  app: "docker"
+  env: "Docker-env"
+  bucket_name: elasticbeanstalk-us-east-1-268755941292
+  bucket_path: "docker"
