@@ -5,7 +5,7 @@ services:
 
 before_install:
   - docker build -t nagdockerid1/docker-react -f Dockerfile.dev .
-  - heroku rake db:migrate
+
 deploy:
   provider: elastickbeanstalk
   region: "us-east-1"
